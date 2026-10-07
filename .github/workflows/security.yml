@@ -1,0 +1,13 @@
+name: Credential safety
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  secret-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for literal CFBD credentials
+        run: python3 scripts/check_secrets.py

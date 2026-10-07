@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfbvip"
+version = "0.1.0"
+description = "Internal college-football decision-support tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+cfbvip-explosive = "cfbvip.features.explosive_opportunity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
